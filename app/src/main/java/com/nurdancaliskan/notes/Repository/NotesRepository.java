@@ -1,9 +1,8 @@
 package com.nurdancaliskan.notes.Repository;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
 
-import androidx.room.Dao;
+import androidx.lifecycle.LiveData;
 
 import com.nurdancaliskan.notes.Dao.NotesDao;
 import com.nurdancaliskan.notes.Database.NotesDatabase;
@@ -23,20 +22,11 @@ public class NotesRepository {
         getallNotes = notesDao.getallNotes();
     }
 
-    void insertUser(Notes notes)
-    {
-        notesDao.insertNotes(notes);
-    }
+   public void insertNotes (Notes notes) { NotesDao.insertNotes(notes); }
 
-    void deleteNotes(int id)
-    {
-        notesDao.deleteNotes(id);
-    }
+   public void deleteNotes (Notes id){ NotesDao.deleteNotes(id);}
 
-    void updateNotes(Notes notes)
-    {
-        notesDao.updateNotes(notes);
-    }
+   public void updateNotes (Notes notes) { NotesDao.updateNotes(notes);}
 
 
 

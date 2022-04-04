@@ -1,7 +1,7 @@
 package com.nurdancaliskan.notes.Dao;
 
-import android.arch.lifecycle.LiveData;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
@@ -17,16 +17,19 @@ public interface NotesDao {
     @Query("SELECT * FROM Notes_Database")
     LiveData<List<Notes>> getallNotes();
 
-
     @Insert
-    void insertNotes(Notes... notes);
+    static void insertNotes(Notes... notes) {
+
+    }
 
     @Query("DELETE FROM Notes_Database WHERE id=:id")
-    void deleteNotes(int id);
+    static void deleteNotes(Notes id) {
+
+    }
 
     @Update
-    void updateNotes(Notes notes);
+    static void updateNotes(Notes notes) {
 
-
+    }
 
 }
