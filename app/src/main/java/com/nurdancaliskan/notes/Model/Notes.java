@@ -13,18 +13,23 @@ public class Notes {
 
 
     @ColumnInfo (name = "notes_title")
+    public
     String notesTitle;
 
     @ColumnInfo (name = "notesSubtitle")
+    public
     String notesSubtitle;
 
     @ColumnInfo (name = "notes_date")
+    public
     String notesDate;
 
     @ColumnInfo (name = "notePrimacy")
+    public
     String notesPrimacy;
 
     @ColumnInfo (name = "notes")
+    public
     String notes;
 
 
