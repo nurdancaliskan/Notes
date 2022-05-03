@@ -15,7 +15,7 @@
             android:name=".Activity.updateNotesActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.insertNotesActivity"
+            android:name=".Activity.InsertNotesActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SplashScreen"

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#E0E1DD"
     android:orientation="vertical"
-    tools:context=".Activity.insertNotesActivity">
+    tools:context=".Activity.InsertNotesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,8 +99,6 @@
             android:hint="Notes"/>
 
     </LinearLayout>
-
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
