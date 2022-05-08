@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         newNotesBtn =findViewById(R.id.newNotesBtn);
-        recyclerView=findViewById(R.id.notesRecyler);
+        recyclerView=findViewById(R.id.notesRecycler);
 
         notesViewModel = ViewModelProviders.of(this).get(NotesViewModel.class);
 
@@ -37,9 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         notesViewModel.getallNotes.observe(this,notes -> {
             recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-            notesAdapter = new NotesAdapter(this,notes);
-            recyclerView.setAdapter();
-
+            notesAdapter = new NotesAdapter(MainActivity.this,notes);
+            recyclerView.setAdapter(notesAdapter);
 
         });
     }

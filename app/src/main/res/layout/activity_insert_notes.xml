@@ -8,7 +8,7 @@
     android:background="#E0E1DD"
     android:orientation="vertical"
     tools:context=".Activity.InsertNotesActivity">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,11 +23,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:background="@drawable/edt_txt_bac"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Title"
-            android:padding="15dp"
-            android:background="@drawable/edt_txt_bac"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:padding="15dp" />
 
         <EditText
             android:id="@+id/notesSubtitle"
@@ -38,11 +38,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:background="@drawable/edt_txt_bac"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Subtitle"
-            android:padding="15dp"
-            android:background="@drawable/edt_txt_bac"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:padding="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,41 +51,41 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/product_sans_regular"
-                android:layout_marginStart="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_margin="10dp"
-                android:text="Colors"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="Colors"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:id="@+id/pinkColors"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/ic_done"
-                android:background="@drawable/red_shape"/>
+                android:background="@drawable/red_shape"
+                android:src="@drawable/ic_done" />
 
             <ImageView
                 android:id="@+id/greenColors"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/green_shape"/>
+                android:background="@drawable/green_shape" />
 
             <ImageView
                 android:id="@+id/yellowColors"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/yellow_shape"/>
+                android:background="@drawable/yellow_shape" />
 
         </LinearLayout>
 
@@ -98,11 +98,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:fontFamily="@font/product_sans_regular"
-            android:padding="15dp"
             android:background="@drawable/edt_txt_bac"
+            android:fontFamily="@font/product_sans_regular"
             android:gravity="start"
-            android:hint="Notes"/>
+            android:hint="Notes"
+            android:padding="15dp" />
 
     </LinearLayout>
 

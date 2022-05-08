@@ -18,7 +18,6 @@ public class NotesViewModel extends AndroidViewModel {
 
     public NotesViewModel(Application application) {
         super(application);
-
        repository = new NotesRepository(application);
        getallNotes = repository.getallNotes;
 
@@ -38,8 +37,6 @@ public class NotesViewModel extends AndroidViewModel {
         repository.updateNotes(notes);
 
     }
-
-
 
     }
 

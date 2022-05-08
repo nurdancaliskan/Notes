@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesRecyler"
+        android:id="@+id/notesRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
@@ -25,8 +25,5 @@
         android:layout_marginBottom="26dp"
         app:backgroundTint="#DF5226"
         android:src="@drawable/ic_add" />
-
-
-
 
 </RelativeLayout>

@@ -41,7 +41,7 @@
                 android:text="Subtitle"/>
 
             <TextView
-                android:id="@+id/notesData"
+                android:id="@+id/notesDate"
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
