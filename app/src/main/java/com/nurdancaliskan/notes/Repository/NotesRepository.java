@@ -12,23 +12,29 @@ import java.util.List;
 
 public class NotesRepository {
 
-    public NotesDao notesDao;
-    public LiveData<List<Notes>> getallNotes;
+    private NotesDao notesDao;
+    private LiveData<List<Notes>> allNotes;
 
     public NotesRepository(Application application)
     {
         NotesDatabase database = NotesDatabase.getDatabaseInstance(application);
         notesDao = database.notesDao();
-        getallNotes = notesDao.getallNotes();
+        allNotes = notesDao.getAllNotes();
     }
 
-   public void insertNotes (Notes notes) { NotesDao.insertNotes(notes); }
+    public void insertNotes(Notes notes) {
+        NotesDatabase.databaseWriteExecutor.execute(() -> {
+            notesDao.insertNotes(notes);
+        });
+    }
 
-   public void deleteNotes (Notes id){ NotesDao.deleteNotes(id);}
+    public LiveData<List<Notes>> allNotes () {
+        return allNotes;
+    }
 
-   public void updateNotes (Notes notes) { NotesDao.updateNotes(notes);}
-
-
-
-
+    public void deleteAll() {
+        NotesDatabase.databaseWriteExecutor.execute(() -> {
+            notesDao.deleteAll();
+        });
+    }
 }

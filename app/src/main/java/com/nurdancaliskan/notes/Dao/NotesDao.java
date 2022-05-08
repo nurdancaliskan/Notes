@@ -2,7 +2,9 @@ package com.nurdancaliskan.notes.Dao;
 
 
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -10,26 +12,24 @@ import com.nurdancaliskan.notes.Model.Notes;
 
 import java.util.List;
 
-@androidx.room.Dao
-
+@Dao
 public interface NotesDao {
 
     @Query("SELECT * FROM Notes_Database")
-    LiveData<List<Notes>> getallNotes();
+    LiveData<List<Notes>> getAllNotes();
 
-    @Insert
-    static void insertNotes(Notes... notes) {
-
-    }
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    void insertNotes(Notes notes);
 
     @Query("DELETE FROM Notes_Database WHERE id=:id")
-    static void deleteNotes(Notes id) {
-
+    default void deleteNotes(Notes id) {
     }
 
-    @Update
-    static void updateNotes(Notes notes) {
+    @Query("DELETE FROM Notes_Database")
+    void deleteAll();
 
+    @Update
+    default void updateNotes(Notes notes) {
     }
 
 }
