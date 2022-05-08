@@ -36,6 +36,19 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
 
         Notes note = notes.get(position);
 
+        if(note.notesPriority.equals("1"))
+        {
+            holder.notesPriority.setBackgroundResource(R.drawable.red_shape);
+        }else if(note.notesPriority.equals("2"))
+        {
+            holder.notesPriority.setBackgroundResource(R.drawable.green_shape);
+
+        }else if (note.notesPriority.equals("3"))
+        {
+            holder.notesPriority.setBackgroundResource(R.drawable.yellow_shape);
+
+        }
+
         holder.title.setText(note.notesTitle);
         holder.subtitle.setText(note.notesSubtitle);
         holder.notesdate.setText(note.notesDate);
@@ -51,6 +64,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
     static class notesViewHolder extends RecyclerView.ViewHolder {
 
         TextView title,subtitle,notesdate;
+        View notesPriority;
 
         public notesViewHolder(View itemView) {
 
@@ -59,6 +73,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
              title=itemView.findViewById(R.id.notesTitle);
              subtitle=itemView.findViewById(R.id.notesSubtitle);
              notesdate=itemView.findViewById(R.id.notesDate);
+             notesPriority=itemView.findViewById(R.id.notesPriority);
 
         }
     }

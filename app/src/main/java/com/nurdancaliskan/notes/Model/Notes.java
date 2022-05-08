@@ -32,5 +32,9 @@ public class Notes {
     public
     String notes;
 
+    @ColumnInfo (name = "notes_Priority")
+    public
+    String notesPriority;
+
 
 }

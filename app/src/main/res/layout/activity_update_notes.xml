@@ -101,6 +101,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/updateNotesBtn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
@@ -108,7 +109,6 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="26dp"
-        android:id="@+id/updateNotesBtn"
         android:layout_marginBottom="26dp"
         android:src="@drawable/ic_done"
         app:backgroundTint="#DF5226" />

@@ -27,7 +27,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(R.drawable.ic_done);
             binding.greenColors.setImageResource(0);
             binding.yellowColors.setImageResource(0);
-            colors ="1";
+            notesPriority ="1";
 
         });
 
@@ -35,7 +35,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(0);
             binding.greenColors.setImageResource(R.drawable.ic_done);
             binding.yellowColors.setImageResource(0);
-            colors ="2";
+            notesPriority ="2";
 
         });
 
@@ -43,7 +43,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(0);
             binding.greenColors.setImageResource(0);
             binding.yellowColors.setImageResource(R.drawable.ic_done);
-            colors ="3";
+            notesPriority ="3";
 
         });
 
