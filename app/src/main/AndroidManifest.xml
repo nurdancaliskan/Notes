@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Notes" >
         <activity
-            android:name=".Activity.updateNotesActivity"
+            android:name=".Activity.UpdateNotesActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.InsertNotesActivity"

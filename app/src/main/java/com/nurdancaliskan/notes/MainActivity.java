@@ -2,6 +2,10 @@ package com.nurdancaliskan.notes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     NotesViewModel notesViewModel;
     RecyclerView recyclerView;
     NotesAdapter notesAdapter;
+    TextView emptyImageView;
     private static final int ADD_NOTES_REQUEST = 1;
+    static final int UPDATE_NOTES_REQUEST = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         newNotesBtn = findViewById(R.id.newNotesBtn);
         recyclerView = findViewById(R.id.notesRecycler);
+        emptyImageView = findViewById(R.id.empty_text);
         notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
 
         newNotesBtn.setOnClickListener(v -> {
@@ -43,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
             notesAdapter = new NotesAdapter(MainActivity.this, notes);
             recyclerView.setAdapter(notesAdapter);
+            if(notes.isEmpty()){
+                emptyImageView.setVisibility(View.VISIBLE);
+            }else{
+                emptyImageView.setVisibility(View.GONE);
+            }
         });
     }
 
@@ -54,13 +66,31 @@ public class MainActivity extends AppCompatActivity {
             String noteSubtitle = data.getStringExtra("subtitle");
             String noteNotes = data.getStringExtra("notes");
             String noteSequence = data.getStringExtra("sequence");
+            int notePriority = data.getIntExtra("color",1);
 
             Notes notes1 = new Notes();
             notes1.notesTitle = noteTitle;
             notes1.notesSubtitle = noteSubtitle;
             notes1.notes = noteNotes;
             notes1.notesDate = noteSequence;
+            notes1.notesPriority = notePriority;
             notesViewModel.insertNote(notes1);
+        }else if(requestCode == UPDATE_NOTES_REQUEST && resultCode == RESULT_OK){
+            int noteId = data.getIntExtra("id",0);
+            String noteTitle = data.getStringExtra("title");
+            String noteSubtitle = data.getStringExtra("subtitle");
+            String noteNotes = data.getStringExtra("notes");
+            String noteSequence = data.getStringExtra("sequence");
+            int notePriority = data.getIntExtra("color",1);
+
+            Notes notes2 = new Notes();
+            notes2.id = noteId;
+            notes2.notesTitle = noteTitle;
+            notes2.notesSubtitle = noteSubtitle;
+            notes2.notes = noteNotes;
+            notes2.notesDate = noteSequence;
+            notes2.notesPriority = notePriority;
+            notesViewModel.updateNotes(notes2);
         }
     }
 }

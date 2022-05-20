@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-@Database(entities = {Notes.class},version = 1)
+@Database(entities = {Notes.class},version =3)
 public abstract class NotesDatabase extends RoomDatabase {
 
     public abstract NotesDao notesDao();
@@ -28,6 +28,7 @@ public abstract class NotesDatabase extends RoomDatabase {
         if(INSTANCE == null){
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                     NotesDatabase.class, "Notes_Database")
+                    .fallbackToDestructiveMigration()
                     .build();
         }
         return  INSTANCE;

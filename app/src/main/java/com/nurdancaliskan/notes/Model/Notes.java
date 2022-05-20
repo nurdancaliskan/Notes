@@ -24,17 +24,13 @@ public class Notes {
     public
     String notesDate;
 
-    @ColumnInfo (name = "notePrimacy")
-    public
-    String notesPrimacy;
-
     @ColumnInfo (name = "notes")
     public
     String notes;
 
     @ColumnInfo (name = "notes_Priority")
     public
-    String notesPriority;
+    int notesPriority;
 
 
 }

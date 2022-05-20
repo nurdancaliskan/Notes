@@ -34,7 +34,12 @@ public class NotesViewModel extends AndroidViewModel {
         return this.AllNotes;
     }
 
-    }
+    public void updateNotes(Notes notes){repository.updateNotes(notes);}
+
+    public void deleteNotes(Notes id){
+        repository.updateNotes(id);}
+
+}
 
 
 

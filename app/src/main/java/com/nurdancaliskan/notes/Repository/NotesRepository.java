@@ -23,9 +23,10 @@ public class NotesRepository {
     }
 
     public void insertNotes(Notes notes) {
-        NotesDatabase.databaseWriteExecutor.execute(() -> {
-            notesDao.insertNotes(notes);
-        });
+        NotesDatabase.databaseWriteExecutor.execute(() -> notesDao.insertNotes(notes));
+    }
+    public void updateNotes(Notes notes){
+        NotesDatabase.databaseWriteExecutor.execute(() -> notesDao.updateNotes(notes));
     }
 
     public LiveData<List<Notes>> allNotes () {
@@ -37,4 +38,5 @@ public class NotesRepository {
             notesDao.deleteAll();
         });
     }
-}
+
+    }

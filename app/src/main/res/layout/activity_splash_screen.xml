@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#383D3B"
     tools:context=".Activity.SplashScreen">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -22,23 +23,12 @@
         app:lottie_rawRes="@raw/splash" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/product_sans_italic"
-        android:gravity="center"
-        android:layout_marginBottom="5dp"
-        android:text="@string/owner"
-        android:textColor="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/product_sans_bold"
         android:text="@string/notes"
-        android:textColor="@color/green"
+        android:textColor="@color/yellow"
         android:textSize="45sp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,12 +38,12 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
-        android:theme="@style/ProgressBar"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:theme="@style/ProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

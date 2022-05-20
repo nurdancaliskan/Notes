@@ -2,20 +2,22 @@ package com.nurdancaliskan.notes.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nurdancaliskan.notes.R;
+import com.nurdancaliskan.notes.ViewModel.NotesViewModel;
 import com.nurdancaliskan.notes.databinding.ActivityInsertNotesBinding;
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class InsertNotesActivity extends AppCompatActivity {
 
     ActivityInsertNotesBinding binding;
     String title, subtitle, notes;
-    String notesPriority ="1";
+    int notesPriority;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(R.drawable.ic_done);
             binding.greenColors.setImageResource(0);
             binding.yellowColors.setImageResource(0);
-            notesPriority ="1";
+            notesPriority =1;
 
         });
 
@@ -35,7 +37,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(0);
             binding.greenColors.setImageResource(R.drawable.ic_done);
             binding.yellowColors.setImageResource(0);
-            notesPriority ="2";
+            notesPriority =2;
 
         });
 
@@ -43,7 +45,7 @@ public class InsertNotesActivity extends AppCompatActivity {
             binding.pinkColors.setImageResource(0);
             binding.greenColors.setImageResource(0);
             binding.yellowColors.setImageResource(R.drawable.ic_done);
-            notesPriority ="3";
+            notesPriority =3;
 
         });
 
@@ -53,20 +55,21 @@ public class InsertNotesActivity extends AppCompatActivity {
             subtitle = binding.notesSubtitle.getText().toString();
             notes = binding.notesData.getText().toString();
 
-            CreateNotes(title, subtitle, notes);
+            CreateNotes(title, subtitle, notes, notesPriority);
         });
     }
 
-    private void CreateNotes(String title, String subtitle, String notes) {
+    private void CreateNotes(String title, String subtitle, String notes,int notesPriority) {
 
-        Date date = new Date();
-        CharSequence sequence = DateFormat.format("MMM d,YYYY",date.getTime());
+        Date currentTime = Calendar.getInstance().getTime();
+        String sequence = DateFormat.getDateInstance().format(currentTime);
 
         Intent data = new Intent();
         data.putExtra("title",title);
         data.putExtra("subtitle",subtitle);
         data.putExtra("notes",notes);
-        data.putExtra("sequence",sequence.toString());
+        data.putExtra("sequence",sequence);
+        data.putExtra("color",notesPriority);
         setResult(RESULT_OK, data);
         finish();
     }

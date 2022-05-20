@@ -15,8 +15,16 @@
     </style>
 
     <style name="ProgressBar" >
-        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondary">@color/yellow</item>
     </style>
 
+
+    <style name="ModalBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="Modal" parent="">
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+    </style>
 
 </resources>

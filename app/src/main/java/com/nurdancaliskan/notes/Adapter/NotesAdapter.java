@@ -1,5 +1,6 @@
 package com.nurdancaliskan.notes.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nurdancaliskan.notes.Activity.UpdateNotesActivity;
 import com.nurdancaliskan.notes.MainActivity;
 import com.nurdancaliskan.notes.Model.Notes;
 import com.nurdancaliskan.notes.R;
@@ -32,26 +34,39 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
 
 
     @Override
-    public void onBindViewHolder( NotesAdapter.notesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NotesAdapter.notesViewHolder holder, int position) {
 
         Notes note = notes.get(position);
 
-        if(note.notesPriority.equals("1"))
-        {
-            holder.notesPriority.setBackgroundResource(R.drawable.red_shape);
-        }else if(note.notesPriority.equals("2"))
-        {
-            holder.notesPriority.setBackgroundResource(R.drawable.green_shape);
-
-        }else if (note.notesPriority.equals("3"))
-        {
-            holder.notesPriority.setBackgroundResource(R.drawable.yellow_shape);
-
+        switch (note.notesPriority) {
+            case 1:
+                holder.notesPriority.setBackgroundResource(R.drawable.red_shape);
+                break;
+            case 2:
+                holder.notesPriority.setBackgroundResource(R.drawable.green_shape);
+                break;
+            case 3:
+                holder.notesPriority.setBackgroundResource(R.drawable.yellow_shape);
+                break;
         }
 
         holder.title.setText(note.notesTitle);
         holder.subtitle.setText(note.notesSubtitle);
         holder.notesdate.setText(note.notesDate);
+
+
+        holder.itemView.setOnClickListener(v -> {
+
+            Intent intent = new Intent(mainActivity, UpdateNotesActivity.class);
+
+            intent.putExtra("id",note.id);
+            intent.putExtra("title",note.notesTitle);
+            intent.putExtra("subtitle",note.notesSubtitle);
+            intent.putExtra("priority",note.notesPriority);
+            intent.putExtra("note",note.notes);
+
+            mainActivity.startActivityForResult(intent,2);
+        });
 
     }
 
