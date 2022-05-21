@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#383D3B"
+    android:background="#FFFFFC"
     android:orientation="vertical"
     tools:context=".Activity.InsertNotesActivity">
 
@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <EditText
+
             android:id="@+id/upTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,11 +23,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Title"
-            android:padding="15dp"
-            android:background="@drawable/edt_txt_bac"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:padding="15dp" />
 
         <EditText
             android:id="@+id/upSubtitle"
@@ -38,11 +38,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Subtitle"
-            android:padding="15dp"
-            android:background="@drawable/edt_txt_bac"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:padding="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,19 +51,23 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:textSize="20sp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/product_sans_regular"
-                android:layout_marginStart="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_margin="10dp"
-                android:text="Colors"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="Colors"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
 
             <ImageView
                 android:id="@+id/pinkColors"
@@ -99,7 +103,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/edt_txt_bac"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:gravity="start"
             android:hint="Notes"
@@ -113,11 +117,10 @@
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="26dp"
         android:src="@drawable/ic_done"
-        app:backgroundTint="#DF5226" />
+        app:backgroundTint="#5CF64A" />
 
 </RelativeLayout>

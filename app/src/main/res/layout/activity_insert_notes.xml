@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#383D3B"
+    android:background="#FFFFFC"
     android:orientation="vertical"
     tools:context=".Activity.InsertNotesActivity">
 
@@ -15,6 +15,7 @@
         android:orientation="vertical">
 
         <EditText
+
             android:id="@+id/notesTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +24,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/edt_txt_bac"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Title"
             android:minHeight="48dp"
@@ -38,7 +39,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/edt_txt_bac"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:hint="Subtitle"
             android:minHeight="48dp"
@@ -52,7 +53,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:textSize="20sp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,7 +65,9 @@
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/product_sans_regular"
                 android:text="Colors"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/pinkColors"
@@ -98,7 +102,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/edt_txt_bac"
+            android:background="#F5F6F4"
             android:fontFamily="@font/product_sans_regular"
             android:gravity="start"
             android:hint="Notes"
@@ -117,6 +121,6 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="26dp"
         android:src="@drawable/ic_done"
-        app:backgroundTint="#DF5226" />
+        app:backgroundTint="#5CF64A" />
 
 </RelativeLayout>

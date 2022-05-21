@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     NotesViewModel notesViewModel;
     RecyclerView recyclerView;
     NotesAdapter notesAdapter;
-    TextView emptyImageView;
+    TextView emptyTextView;
+    ImageView imageView;
+
     private static final int ADD_NOTES_REQUEST = 1;
     static final int UPDATE_NOTES_REQUEST = 2;
 
@@ -34,9 +36,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        imageView = findViewById(R.id.tatli_adam);
         newNotesBtn = findViewById(R.id.newNotesBtn);
         recyclerView = findViewById(R.id.notesRecycler);
-        emptyImageView = findViewById(R.id.empty_text);
+        emptyTextView = findViewById(R.id.empty_text);
+
         notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
 
         newNotesBtn.setOnClickListener(v -> {
@@ -51,9 +56,13 @@ public class MainActivity extends AppCompatActivity {
             notesAdapter = new NotesAdapter(MainActivity.this, notes);
             recyclerView.setAdapter(notesAdapter);
             if(notes.isEmpty()){
-                emptyImageView.setVisibility(View.VISIBLE);
+                emptyTextView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.VISIBLE);
+
             }else{
-                emptyImageView.setVisibility(View.GONE);
+                emptyTextView.setVisibility(View.GONE);
+                imageView.setVisibility(View.GONE);
+
             }
         });
     }
