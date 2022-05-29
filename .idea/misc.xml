@@ -9,6 +9,7 @@
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/green_shape.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_add.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_baseline_accessibility_new_24.xml" value="0.1" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_baseline_subdirectory_arrow_right_24.xml" value="0.3045" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_delete.xml" value="0.1425" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_done.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1845" />
@@ -18,12 +19,12 @@
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/red_shape.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/yellow_shape.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/yes_delete.xml" value="0.1" />
-        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_insert_notes.xml" value="0.176" />
-        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_insert_notes.xml" value="0.264" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_splash_screen.xml" value="0.16197916666666667" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_update_notes.xml" value="0.176" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/delete_botom_sheet.xml" value="0.2" />
-        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/item_notes.xml" value="0.1" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/item_notes.xml" value="0.4" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/menu/delete_notes.xml" value="0.16" />
       </map>
     </option>

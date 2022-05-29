@@ -13,8 +13,9 @@
     <color name="green">#FFF05A</color>
     <color name="blue">#003554</color>
     <color name="orange">#E4572E</color>
-    <color name="grey">#605B56</color>
+    <color name="grey">#CFCAC9</color>
     <color name="yellow2">#E4FF1A</color>
     <color name="green2">#5CF64A</color>
+    <color name="gray">#CFCAC9</color>
 
 </resources>
