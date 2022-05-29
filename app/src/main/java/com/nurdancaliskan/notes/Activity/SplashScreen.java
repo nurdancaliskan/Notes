@@ -8,15 +8,18 @@ import android.os.Handler;
 
 import com.nurdancaliskan.notes.MainActivity;
 import com.nurdancaliskan.notes.R;
+import com.nurdancaliskan.notes.databinding.ActivityMainBinding;
 
 public class SplashScreen extends AppCompatActivity {
+    SplashScreen binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        getSupportActionBar().hide();
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -25,6 +28,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 finish();
             }
-        },4000);
+        },3000);
     }
 }

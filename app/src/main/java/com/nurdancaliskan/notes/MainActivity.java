@@ -18,9 +18,12 @@ import com.nurdancaliskan.notes.Activity.InsertNotesActivity;
 import com.nurdancaliskan.notes.Adapter.NotesAdapter;
 import com.nurdancaliskan.notes.Model.Notes;
 import com.nurdancaliskan.notes.ViewModel.NotesViewModel;
+import com.nurdancaliskan.notes.databinding.ActivityMainBinding;
+import com.nurdancaliskan.notes.databinding.ActivityUpdateNotesBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    ActivityMainBinding binding;
     FloatingActionButton newNotesBtn;
     NotesViewModel notesViewModel;
     RecyclerView recyclerView;
@@ -34,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-        imageView = findViewById(R.id.tatli_adam);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.nurdan.setFrame(120);
+        imageView = findViewById(R.id.nurdan);
         newNotesBtn = findViewById(R.id.newNotesBtn);
         recyclerView = findViewById(R.id.notesRecycler);
         emptyTextView = findViewById(R.id.empty_text);
@@ -100,6 +103,22 @@ public class MainActivity extends AppCompatActivity {
             notes2.notesDate = noteSequence;
             notes2.notesPriority = notePriority;
             notesViewModel.updateNotes(notes2);
+        }else if (requestCode == UPDATE_NOTES_REQUEST && resultCode == RESULT_CANCELED){
+            int noteId = data.getIntExtra("id",0);
+            String noteTitle = data.getStringExtra("title");
+            String noteSubtitle = data.getStringExtra("subtitle");
+            String noteNotes = data.getStringExtra("notes");
+            String noteSequence = data.getStringExtra("sequence");
+            int notePriority = data.getIntExtra("color",1);
+
+            Notes notes3 = new Notes();
+            notes3.id = noteId;
+            notes3.notesTitle = noteTitle;
+            notes3.notesSubtitle = noteSubtitle;
+            notes3.notes = noteNotes;
+            notes3.notesDate = noteSequence;
+            notes3.notesPriority = notePriority;
+            notesViewModel.deleteNotes(notes3);
         }
     }
 }

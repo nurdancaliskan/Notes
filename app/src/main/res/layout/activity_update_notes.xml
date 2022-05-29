@@ -5,14 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFC"
+    android:background="#EBEBEB"
     android:orientation="vertical"
     tools:context=".Activity.InsertNotesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="672dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical">
+
         <EditText
 
             android:id="@+id/upTitle"
@@ -121,6 +124,19 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="26dp"
         android:src="@drawable/ic_done"
-        app:backgroundTint="#CFCAC9" />
+        app:backgroundTint="#3490dc" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteNotesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/ic_delete"
+        app:backgroundTint="#3490dc" />
 
 </RelativeLayout>

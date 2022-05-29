@@ -11,7 +11,6 @@ public class Notes {
     @PrimaryKey (autoGenerate = true)
     public  int id;
 
-
     @ColumnInfo (name = "notes_title")
     public
     String notesTitle;

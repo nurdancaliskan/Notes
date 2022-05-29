@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1165" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/delete.xml" value="0.3045" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/delete_indictor_shape.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/edt_txt_bac.xml" value="0.1" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/drawable/green_shape.xml" value="0.1" />
@@ -22,10 +23,12 @@
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_insert_notes.xml" value="0.264" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_splash_screen.xml" value="0.16197916666666667" />
-        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_update_notes.xml" value="0.176" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_update_notes.xml" value="0.264" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/delete_botom_sheet.xml" value="0.2" />
-        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/item_notes.xml" value="0.4" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/layout/item_notes.xml" value="0.264" />
         <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/menu/delete_notes.xml" value="0.16" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2625" />
+        <entry key="..\:/Users/nurda/AndroidStudioProjects/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2625" />
       </map>
     </option>
   </component>

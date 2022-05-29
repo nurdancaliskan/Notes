@@ -27,9 +27,9 @@ public class UpdateNotesActivity extends AppCompatActivity {
 
     ActivityUpdateNotesBinding binding;
     NotesViewModel notesViewModel;
-    int notesPriority,sid;
-    String stitle, ssubtitle, snotes, spriority;
-    Notes iid;
+    int notesPriority,sid,spriority,id;
+    String stitle, ssubtitle, snotes,title,subtitle,notes;
+    Notes note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,31 @@ public class UpdateNotesActivity extends AppCompatActivity {
         stitle = getIntent().getStringExtra("title");
         ssubtitle = getIntent().getStringExtra("subtitle");
         snotes = getIntent().getStringExtra("note");
-        spriority = getIntent().getStringExtra("priority");
+        spriority = getIntent().getIntExtra("priority",1);
+
+        binding.deleteNotesBtn.setOnClickListener(V -> {
+            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(UpdateNotesActivity.this);
+            View view = LayoutInflater.from(UpdateNotesActivity.this).
+                    inflate(R.layout.delete_botom_sheet,(LinearLayout)findViewById(R.id.bottomsheet));
+            bottomSheetDialog.setContentView(view);
+
+            TextView yes,no;
+            yes =view.findViewById(R.id.delete_yes);
+            no =view.findViewById(R.id.delete_no);
+
+            yes.setOnClickListener(v -> {
+                UpdateNotes(id,title, subtitle, notes, notesPriority,true);
+                bottomSheetDialog.dismiss();
+                finish();
+            });
+
+            no.setOnClickListener(v -> {
+                bottomSheetDialog.dismiss();
+            });
+            bottomSheetDialog.show();
+        });
+
+
 
         binding.upTitle.setText(stitle);
         binding.upSubtitle.setText(ssubtitle);
@@ -80,15 +104,13 @@ public class UpdateNotesActivity extends AppCompatActivity {
             String subtitle = binding.upSubtitle.getText().toString();
             String notes = binding.upNotes.getText().toString();
 
-            UpdateNotes(id,title, subtitle, notes, notesPriority);
-
-
+            UpdateNotes(id,title, subtitle, notes, notesPriority,false);
         });
 
 
     }
 
-    private void UpdateNotes(int id,String title, String subtitle, String notes, int notesPriority) {
+    private void UpdateNotes(int id,String title, String subtitle, String notes, int notesPriority,boolean delete) {
 
         Date currentTime = Calendar.getInstance().getTime();
         String sequence = DateFormat.getDateInstance().format(currentTime);
@@ -102,45 +124,11 @@ public class UpdateNotesActivity extends AppCompatActivity {
         data.putExtra("notes",notes);
         data.putExtra("sequence",sequence);
         data.putExtra("color",notesPriority);
-        setResult(RESULT_OK, data);
-        finish();
-    }
-
-    @Override
-    public  boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.delete_notes,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if(item.getItemId() == R.id.delete)
-        {
-            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(UpdateNotesActivity.this);
-            View view = LayoutInflater.from(UpdateNotesActivity.this).
-                    inflate(R.layout.delete_botom_sheet,(LinearLayout)findViewById(R.id.bottomsheet));
-            bottomSheetDialog.setContentView(view);
-
-            TextView yes,no;
-            yes =view.findViewById(R.id.delete_yes);
-            no =view.findViewById(R.id.delete_no);
-
-            yes.setOnClickListener(v -> {
-
-                notesViewModel.deleteNotes(iid);
-                finish();
-
-            });
-
-            no.setOnClickListener(v -> {
-                bottomSheetDialog.dismiss();
-
-            });
-
-
-            bottomSheetDialog.show();
+        if(delete == true){
+            setResult(RESULT_CANCELED,data);
+        }else{
+            setResult(RESULT_OK, data);
         }
-        return true ;
+        finish();
     }
 }
