@@ -2,6 +2,7 @@ package com.nurdancaliskan.notes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,15 +10,18 @@ import android.os.Handler;
 import com.nurdancaliskan.notes.MainActivity;
 import com.nurdancaliskan.notes.R;
 import com.nurdancaliskan.notes.databinding.ActivityMainBinding;
+import com.nurdancaliskan.notes.databinding.ActivitySplashScreenBinding;
 
 public class SplashScreen extends AppCompatActivity {
-    SplashScreen binding;
+    ActivitySplashScreenBinding binding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.imageView.setFrame(120);
 
 
 
@@ -28,6 +32,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 finish();
             }
-        },3000);
+        },3500);
     }
 }
