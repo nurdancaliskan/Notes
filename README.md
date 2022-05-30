@@ -10,18 +10,19 @@ Users can use these features:
 
 
 ## Built With 
-
+<p>
 <img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg">
 <img src="https://www.vectorlogo.zone/logos/android/android-ar21.svg">
+</p>
 
 ## How does it look ?
 
 <p>
-<img height= "370" src="https://i.hizliresim.com/4d9875n.jpeg" alt="png" />
-<img height= "370" src="https://i.hizliresim.com/jxaz3fc.jpeg" alt="png" />
-<img height= "370" src="https://i.hizliresim.com/ct3d16o.jpeg" alt="png" />
-<img height= "370" src="https://i.hizliresim.com/dsf7pag.jpeg" alt="png" />
-<img height= "370" src="https://i.hizliresim.com/8u8hrc4.jpeg" alt="png" />
+<img height= "350" src="https://i.hizliresim.com/4d9875n.jpeg" alt="png" />
+<img height= "350" src="https://i.hizliresim.com/jxaz3fc.jpeg" alt="png" />
+<img height= "350" src="https://i.hizliresim.com/ct3d16o.jpeg" alt="png" />
+<img height= "350" src="https://i.hizliresim.com/dsf7pag.jpeg" alt="png" />
+<img height= "350" src="https://i.hizliresim.com/8u8hrc4.jpeg" alt="png" />
 </p>
 
 ## Tools 
