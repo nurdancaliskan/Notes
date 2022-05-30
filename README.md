@@ -11,8 +11,8 @@ Users can use these features:
 
 ## Built With 
 
-<code><img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"></code>
-<code><img src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"></code>
+<img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg">
+<img src="https://www.vectorlogo.zone/logos/android/android-ar21.svg">
 
 ## How does it look ?
 
