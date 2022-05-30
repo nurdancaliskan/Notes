@@ -32,7 +32,7 @@ Users can use these features:
 <li><a>LiveData</a></li>
 <li><a>Room Database</a></li>
 <li><a>Lottie Animations</a></li>
-<li><a>Layout Design</a></li>
+<li><a>Material Design</a></li>
 
 ## Architecture
 
