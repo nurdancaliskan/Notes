@@ -37,5 +37,6 @@ Users can use these features:
 ## Architecture
 
 Notes App project with the MVVM pattern by following the official Android docs schema and other internet resources.
+
 <img height= "400" src="https://i.hizliresim.com/22f3kle.png" alt="png" />
  
