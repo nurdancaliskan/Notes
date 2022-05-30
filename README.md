@@ -1,5 +1,14 @@
 # Notes
 
+
+Users can use these features:
+- Create Notes
+- Color Notes
+- Save Notes
+- Edit Notes
+- Delete Note
+
+
 ## Built With 
 
 <code><img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"></code>
@@ -14,6 +23,14 @@
 <img height= "390" src="https://i.hizliresim.com/dsf7pag.jpeg" alt="png" />
 <img height= "390" src="https://i.hizliresim.com/8u8hrc4.jpeg" alt="png" />
 </p>
+
+## Tools 
+
+<li><a>MVVM</a></li>
+<li><a>LiveData</a></li>
+<li><a>Room Database</a></li>
+<li><a>Lottie Animations</a></li>
+<li><a>Layout Design</a></li>
 
 ## Architecture
 
