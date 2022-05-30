@@ -8,15 +8,15 @@
 ## How does it look ?
 
 <p>
-<code><img height= "400" src="https://i.hizliresim.com/4d9875n.jpeg" alt="png" /></code>
-<code><img height= "400" src="https://i.hizliresim.com/jxaz3fc.jpeg" alt="png" /></code>
-<code><img height= "400" src="https://i.hizliresim.com/ct3d16o.jpeg" alt="png" /></code>
-<code><img height= "400" src="https://i.hizliresim.com/dsf7pag.jpeg" alt="png" /></code>
-<code><img height= "400" src="https://i.hizliresim.com/8u8hrc4.jpeg" alt="png" /></code>
+<img height= "390" src="https://i.hizliresim.com/4d9875n.jpeg" alt="png" />
+<img height= "390" src="https://i.hizliresim.com/jxaz3fc.jpeg" alt="png" />
+<img height= "390" src="https://i.hizliresim.com/ct3d16o.jpeg" alt="png" />
+<img height= "390" src="https://i.hizliresim.com/dsf7pag.jpeg" alt="png" />
+<img height= "390" src="https://i.hizliresim.com/8u8hrc4.jpeg" alt="png" />
 </p>
 
 ## Architecture
 
 Notes App project with the MVVM pattern by following the official Android docs schema and other internet resources.
-<code><img height= "400" src="https://i.hizliresim.com/22f3kle.png" alt="png" /></code>
+<img height= "400" src="https://i.hizliresim.com/22f3kle.png" alt="png" />
 
