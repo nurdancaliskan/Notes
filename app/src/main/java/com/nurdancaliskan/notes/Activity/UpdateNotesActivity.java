@@ -1,22 +1,17 @@
 package com.nurdancaliskan.notes.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.nurdancaliskan.notes.Model.Notes;
 import com.nurdancaliskan.notes.R;
-import com.nurdancaliskan.notes.ViewModel.NotesViewModel;
 import com.nurdancaliskan.notes.databinding.ActivityUpdateNotesBinding;
 
 import java.text.DateFormat;
@@ -32,6 +27,8 @@ public class UpdateNotesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         binding = ActivityUpdateNotesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
