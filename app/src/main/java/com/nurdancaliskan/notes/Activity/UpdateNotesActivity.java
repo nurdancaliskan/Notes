@@ -26,10 +26,8 @@ import java.util.Date;
 public class UpdateNotesActivity extends AppCompatActivity {
 
     ActivityUpdateNotesBinding binding;
-    NotesViewModel notesViewModel;
-    int notesPriority,sid,spriority,id;
-    String stitle, ssubtitle, snotes,title,subtitle,notes;
-    Notes note;
+    int notesPriority,sid,spriority;
+    String stitle, ssubtitle, snotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +52,7 @@ public class UpdateNotesActivity extends AppCompatActivity {
             no =view.findViewById(R.id.delete_no);
 
             yes.setOnClickListener(v -> {
-                UpdateNotes(id,title, subtitle, notes, notesPriority,true);
+                UpdateNotes(sid,stitle, ssubtitle, snotes, spriority,true);
                 bottomSheetDialog.dismiss();
                 finish();
             });
@@ -115,7 +113,6 @@ public class UpdateNotesActivity extends AppCompatActivity {
         Date currentTime = Calendar.getInstance().getTime();
         String sequence = DateFormat.getDateInstance().format(currentTime);
 
-        Toast.makeText(this, "Notes Updated", Toast.LENGTH_SHORT).show();
 
         Intent data = new Intent();
         data.putExtra("id",id);
@@ -124,9 +121,11 @@ public class UpdateNotesActivity extends AppCompatActivity {
         data.putExtra("notes",notes);
         data.putExtra("sequence",sequence);
         data.putExtra("color",notesPriority);
-        if(delete == true){
+        if(delete){
+            Toast.makeText(this, "Note Deleted", Toast.LENGTH_SHORT).show();
             setResult(RESULT_CANCELED,data);
         }else{
+            Toast.makeText(this, "Note Updated", Toast.LENGTH_SHORT).show();
             setResult(RESULT_OK, data);
         }
         finish();

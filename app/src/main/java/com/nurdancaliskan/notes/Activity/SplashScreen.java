@@ -24,7 +24,6 @@ public class SplashScreen extends AppCompatActivity {
         binding.imageView.setFrame(120);
 
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

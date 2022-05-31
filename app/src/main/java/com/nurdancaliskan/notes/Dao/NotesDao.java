@@ -22,8 +22,7 @@ public interface NotesDao {
     void insertNotes(Notes notes);
 
     @Query("DELETE FROM Notes_Database WHERE id=:id")
-    default void deleteNotes(int id) {
-    }
+    void deleteNotes(int id);
 
     @Query("DELETE FROM Notes_Database")
     void deleteAll();

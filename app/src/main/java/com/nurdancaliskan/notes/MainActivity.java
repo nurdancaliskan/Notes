@@ -24,8 +24,6 @@ import com.nurdancaliskan.notes.databinding.ActivityUpdateNotesBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View decorView;
-
     ActivityMainBinding binding;
     FloatingActionButton newNotesBtn;
     NotesViewModel notesViewModel;
@@ -43,8 +41,11 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.nurdan.setFrame(120);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
-        decorView = getWindow().getDecorView();
+
+        /*
+          decorView = getWindow().getDecorView();
         decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
             public void onSystemUiVisibilityChange(int i) {
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
         });
-
+         */
 
         imageView = findViewById(R.id.nurdan);
         newNotesBtn = findViewById(R.id.newNotesBtn);
@@ -66,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, InsertNotesActivity.class);
             startActivityForResult(intent, ADD_NOTES_REQUEST);
         });
-
-        notesViewModel.deleteAll(); // açılışta siliyor
 
         notesViewModel.getAllNotes().observe(this, notes -> {
             recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -121,39 +120,7 @@ public class MainActivity extends AppCompatActivity {
             notesViewModel.updateNotes(notes2);
         }else if (requestCode == UPDATE_NOTES_REQUEST && resultCode == RESULT_CANCELED){
             int noteId = data.getIntExtra("id",0);
-            String noteTitle = data.getStringExtra("title");
-            String noteSubtitle = data.getStringExtra("subtitle");
-            String noteNotes = data.getStringExtra("notes");
-            String noteSequence = data.getStringExtra("sequence");
-            int notePriority = data.getIntExtra("color",1);
-
-            Notes notes3 = new Notes();
-            notes3.id = noteId;
-            notes3.notesTitle = noteTitle;
-            notes3.notesSubtitle = noteSubtitle;
-            notes3.notes = noteNotes;
-            notes3.notesDate = noteSequence;
-            notes3.notesPriority = notePriority;
-            notesViewModel.deleteNotes(notes3);
+            notesViewModel.deleteNotes(noteId);
         }
-
-    }
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            decorView.setSystemUiVisibility(hideSystemBars());
-        };
-    }
-
-    private int hideSystemBars(){
-        return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-
     }
 }
